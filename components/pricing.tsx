@@ -21,7 +21,9 @@ export default function Pricing() {
         <div className="py-12 md:py-20 border-t border-gray-800">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 font-uncut-sans mb-4">Accès & Compte Premium</h2>
+            <h2 className="h2 font-uncut-sans mb-4">
+              Access & Premium Account
+            </h2>
           </div>
           {/* Pricing tables */}
           <div className="max-w-md mx-auto grid gap-8 lg:grid-cols-2 lg:gap-6 items-start lg:max-w-none pt-4">
@@ -33,9 +35,9 @@ export default function Pricing() {
               <div className="mb-6">
                 <div className="text-lg font-semibold mb-1">Starter</div>
                 <div className="font-uncut-sans inline-flex items-baseline mb-2">
-                  <span className="text-4xl font-bold leading-7">Gratuit</span>
+                  <span className="text-4xl font-bold leading-7">Free</span>
                 </div>
-                <div className="text-gray-400 mb-6">Pack de base</div>
+                <div className="text-gray-400 mb-6">Basic package</div>
                 <a className="btn-sm text-white bg-gradient-to-t from-[#074264] to-[#83A5C7] w-full shadow-lg group"></a>
               </div>
               <ul className="text-gray-400 space-y-3 grow">
@@ -47,7 +49,7 @@ export default function Pricing() {
                   >
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>Gestion du disque de stationnement</span>
+                  <span>Parking disc management</span>
                 </li>
                 <li className="flex items-center">
                   <svg
@@ -57,7 +59,7 @@ export default function Pricing() {
                   >
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>Géolocalisation et caméra</span>
+                  <span>Geolocation and camera</span>
                 </li>
                 <li className="flex items-center">
                   <svg
@@ -67,7 +69,7 @@ export default function Pricing() {
                   >
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>Notifications et Alertes</span>
+                  <span>Notifications and Alerts</span>
                 </li>
                 <li className="flex items-center">
                   <svg
@@ -77,9 +79,7 @@ export default function Pricing() {
                   >
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>
-                    Personnalisation de l&apos;interface de l&apos;application
-                  </span>
+                  <span>Customising the application&apos;s interface</span>
                 </li>
               </ul>
             </div>
@@ -99,7 +99,7 @@ export default function Pricing() {
                   >
                     <path d="M5.315.068a.5.5 0 0 0-.745.347A7.31 7.31 0 0 1 3.182 3.6a7.924 7.924 0 0 1-.8.83A6.081 6.081 0 0 0 0 9.035a5.642 5.642 0 0 0 2.865 4.9.5.5 0 0 0 .746-.4 2.267 2.267 0 0 1 .912-1.67 4.067 4.067 0 0 0 1.316-1.4 4.662 4.662 0 0 1 1.819 3.1.5.5 0 0 0 .742.371c1.767-.999 2.86-2.87 2.865-4.9-.001-3.589-2.058-6.688-5.95-8.968Z" />
                   </svg>
-                  <span>Populaire</span>
+                  <span>Popular</span>
                 </div>
               </div>
               <div className="mb-6">
@@ -107,13 +107,13 @@ export default function Pricing() {
                 <div className="font-uncut-sans inline-flex items-baseline mb-2">
                   <span className="text-3xl font-medium text-gray-400">€</span>
                   <span className="text-4xl font-bold leading-7">74.99</span>
-                  <span className="font-medium text-gray-400">/an</span>
+                  <span className="font-medium text-gray-400">/year</span>
                 </div>
-                <div className="text-gray-400 mb-6">Pack avancé</div>
+                <div className="text-gray-400 mb-6">Advanced pack</div>
                 <a className="btn-sm text-white bg-gradient-to-t from-[#074264] to-[#83A5C7] w-full shadow-lg group"></a>
               </div>
               <div className="font-medium mb-4">
-                Tout ce qui est dans Starter, plus :
+                Everything in Starter, more :
               </div>
               <ul className="text-gray-400 space-y-3 grow">
                 <li className="flex items-center">
@@ -124,7 +124,7 @@ export default function Pricing() {
                   >
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>Historique et Rapports</span>
+                  <span>History and Reports</span>
                 </li>
                 <li className="flex items-center">
                   <svg
@@ -134,7 +134,7 @@ export default function Pricing() {
                   >
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>Sécurité et Surveillance</span>
+                  <span>Security and surveillance</span>
                 </li>
                 <li className="flex items-center">
                   <svg
@@ -144,7 +144,7 @@ export default function Pricing() {
                   >
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>Géolocalisation Avancée</span>
+                  <span>Advanced geolocation</span>
                 </li>
                 <li className="flex items-center">
                   <svg
@@ -154,7 +154,7 @@ export default function Pricing() {
                   >
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>Personnalisation et Contrôle Avancé</span>
+                  <span>Customisation and Advanced Control</span>
                 </li>
                 <li className="flex items-center">
                   <svg
@@ -164,7 +164,7 @@ export default function Pricing() {
                   >
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>Options de Paiement</span>
+                  <span>Payment Options</span>
                 </li>
               </ul>
             </div>

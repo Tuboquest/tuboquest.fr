@@ -6,7 +6,7 @@ export default function Features() {
           {/* Section header */}
           <div className="text-center pb-12 md:pb-20">
             <h2 className="h2 font-uncut-sans" data-aos="zoom-out">
-              Fonctionnalités principales
+              Main features
             </h2>
           </div>
           {/* Items */}
@@ -48,11 +48,11 @@ export default function Features() {
                 </svg>
               </div>
               <h4 className="h4 text-gray-200 text-center mb-2">
-                Inscription simple
+                Simple registration
               </h4>
               <p className="text-lg text-gray-400 text-center">
-                Créez votre compte en quelques étapes et ajoutez vos
-                informations de paiement de manière sécurisée.
+                Create your account in just a few steps and add your payment
+                details securely.
               </p>
             </div>
             {/* 2nd item */}
@@ -96,11 +96,11 @@ export default function Features() {
                 </svg>
               </div>
               <h4 className="h4 text-gray-200 text-center mb-2">
-                Démarrage instantané
+                Instant start
               </h4>
               <p className="text-lg text-gray-400 text-center">
-                Commencez votre stationnement en un clic depuis
-                l&apos;application, sans avoir à retourner à votre véhicule.
+                Start parking in just one click from the application, without
+                having to return to your car.
               </p>
             </div>
             {/* 3rd item */}
@@ -144,11 +144,11 @@ export default function Features() {
                 </svg>
               </div>
               <h4 className="h4 text-gray-200 text-center mb-2">
-                Gestion en temps réel
+                Real-time management
               </h4>
               <p className="text-lg text-gray-400 text-center">
-                Surveillez le temps restant, prolongez ou arrêtez votre session
-                quand vous le souhaitez.
+                Monitor the time remaining, and extend or stop your session
+                whenever you like.
               </p>
             </div>
           </div>
