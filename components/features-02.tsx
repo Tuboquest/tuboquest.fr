@@ -29,7 +29,7 @@ export default function Features02() {
             >
               <div className="text-center md:text-left">
                 <h3 className="h3 font-uncut-sans text-4xl mb-4">
-                  Notifications et alertes
+                  Notifications and alerts
                 </h3>
                 <ul className="inline-flex flex-col text-lg text-gray-400 space-y-3">
                   <li className="flex items-center">
@@ -42,10 +42,10 @@ export default function Features02() {
                     </svg>
                     <span>
                       <b>
-                        <u>Alertes</u>
+                        <u>Alerts</u>
                       </b>{" "}
-                      : Recevez des notifications en temps réel pour ne jamais
-                      dépasser votre temps de stationnement.
+                      : Receive real-time notifications so you never exceed your
+                      parking time.
                     </span>
                   </li>
                   <li className="flex items-center">
@@ -58,10 +58,10 @@ export default function Features02() {
                     </svg>
                     <span>
                       <b>
-                        <u>Rappels</u>
+                        <u>Reminders</u>
                       </b>{" "}
-                      : Soyez informé du temps restant pour ajuster votre
-                      stationnement en conséquence.
+                      : Be informed of the time remaining to adjust your parking
+                      accordingly.
                     </span>
                   </li>
                   <li className="flex items-center">
@@ -74,10 +74,9 @@ export default function Features02() {
                     </svg>
                     <span>
                       <b>
-                        <u>Localisation</u>
+                        <u>Location</u>
                       </b>{" "}
-                      : Géolocalisez votre emplacement de stationnement pour y
-                      retourner facilement.
+                      : Geolocate your parking space for easy return.
                     </span>
                   </li>
                 </ul>

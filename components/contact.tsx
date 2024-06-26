@@ -51,23 +51,6 @@ export default function Contact() {
                 <div className="w-full px-3">
                   <label
                     className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1"
-                    htmlFor="company"
-                  >
-                    Company <span className="text-red-600">*</span>
-                  </label>
-                  <input
-                    id="company"
-                    type="text"
-                    className="form-input w-full"
-                    placeholder="Enter your company name"
-                    required
-                  />
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mb-5">
-                <div className="w-full px-3">
-                  <label
-                    className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1"
                     htmlFor="phone"
                   >
                     Phone Number <span className="text-red-600">*</span>
@@ -111,7 +94,7 @@ export default function Contact() {
                     id="message"
                     rows={4}
                     className="form-textarea w-full"
-                    placeholder="What do you want to build with Appy?"
+                    placeholder="Write your message here"
                   ></textarea>
                 </div>
               </div>
