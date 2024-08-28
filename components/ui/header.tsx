@@ -32,19 +32,6 @@ export default function Header({ nav = true }: { nav?: boolean }) {
               <Image src={logo} alt="Logo" width={100} height={100} />
             </Link>
           </div>
-          {/* Desktop navigation */}
-          {nav && (
-            <nav className="flex grow">
-              {/* Desktop sign in links */}
-              <ul className="flex grow justify-end flex-wrap items-center">
-                <li className="ml-12">
-                  <Link className="text-white hover:underline" href="#0">
-                    Gaming
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          )}
         </div>
       </div>
     </header>
