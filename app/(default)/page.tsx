@@ -8,6 +8,7 @@ import Features from "@/components/features";
 import Features02 from "@/components/features-02";
 import Pricing from "@/components/pricing";
 import Contact from "@/components/contact";
+import Gaming from "@/components/gaming";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Features02 />
       <Pricing />
       <Contact />
+      <Gaming />
     </>
   );
 }
