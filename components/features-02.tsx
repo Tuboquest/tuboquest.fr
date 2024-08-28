@@ -4,7 +4,7 @@ import Notifications from "@/public/images/Notifications.png";
 
 export default function Features02() {
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden bg-black">
       {/* Bg gradient */}
       <div
         className="absolute top-0 left-0 right-0 bg-gradient-to-b from-gray-800 to-gray-900 opacity-60 h-[10rem] pointer-events-none -z-10"

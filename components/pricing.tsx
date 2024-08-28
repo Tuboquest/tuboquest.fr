@@ -3,7 +3,7 @@ import Illustration from "@/public/images/pricing-illustration.svg";
 
 export default function Pricing() {
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden bg-black">
       {/* Illustration */}
       <div
         className="hidden lg:block absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none -z-10"
