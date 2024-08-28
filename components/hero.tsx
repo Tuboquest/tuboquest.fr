@@ -40,7 +40,7 @@ export default function Hero() {
                 <div>
                   <a
                     className="btn text-white bg-gradient-to-t from-[#074264] to-[#83A5C7] hover:to-[#1E95D9] w-full shadow-lg group"
-                    href="#0"
+                    href="https://lydia-app.com/pots?id=71380-tubopark"
                   >
                     Support us{" "}
                     <span className="tracking-normal text-blue-200 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
