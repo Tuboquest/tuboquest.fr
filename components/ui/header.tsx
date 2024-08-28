@@ -20,7 +20,7 @@ export default function Header({ nav = true }: { nav?: boolean }) {
   return (
     <header
       className={`fixed w-full z-30 transition-colors duration-300 ${
-        scrolled ? "bg-black" : "bg-gradient-to-r from-[#1e95d9] to-[#000000]"
+        scrolled ? "bg-black" : "bg-gradient-to-b from-[#1e95d9] to-[#000000]"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
