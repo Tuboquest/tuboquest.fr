@@ -1,4 +1,47 @@
+import { useState } from "react";
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    country: "French",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setStatus("Message envoyé avec succès!");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        country: "French",
+        message: "",
+      });
+    } else {
+      setStatus("Erreur lors de l'envoi du message.");
+    }
+  };
+
   return (
     <>
       <section className="relative overflow-hidden bg-black">
@@ -14,36 +57,40 @@ export default function Contact() {
             </div>
 
             {/* Contact form */}
-            <form className="max-w-xl mx-auto">
+            <form className="max-w-xl mx-auto" onSubmit={handleSubmit}>
               <div className="flex flex-wrap -mx-3 mb-5">
                 <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                   <label
                     className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1"
-                    htmlFor="first-name"
+                    htmlFor="firstName"
                   >
                     First Name <span className="text-red-600">*</span>
                   </label>
                   <input
-                    id="first-name"
+                    id="firstName"
                     type="text"
                     className="form-input w-full"
                     placeholder="Enter your first name"
                     required
+                    value={formData.firstName}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="w-full md:w-1/2 px-3">
                   <label
                     className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1"
-                    htmlFor="last-name"
+                    htmlFor="lastName"
                   >
                     Last Name <span className="text-red-600">*</span>
                   </label>
                   <input
-                    id="last-name"
+                    id="lastName"
                     type="text"
                     className="form-input w-full"
                     placeholder="Enter your last name"
                     required
+                    value={formData.lastName}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -61,6 +108,8 @@ export default function Contact() {
                     className="form-input w-full"
                     placeholder="Enter your phone number"
                     required
+                    value={formData.phone}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -72,7 +121,13 @@ export default function Contact() {
                   >
                     Country <span className="text-red-600">*</span>
                   </label>
-                  <select id="country" className="form-select w-full" required>
+                  <select
+                    id="country"
+                    className="form-select w-full"
+                    required
+                    value={formData.country}
+                    onChange={handleChange}
+                  >
                     <option>French</option>
                     <option>Belgium</option>
                     <option>United Kingdom</option>
@@ -95,13 +150,19 @@ export default function Contact() {
                     rows={4}
                     className="form-textarea w-full"
                     placeholder="Write your message here"
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
                   ></textarea>
                 </div>
               </div>
 
               <div className="flex flex-wrap -mx-3 mt-6">
                 <div className="w-full px-3">
-                  <button className="btn text-white bg-gradient-to-t from-[#074264] to-[#83A5C7] hover:to-[#1E95D9] w-full shadow-lg group">
+                  <button
+                    className="btn text-white bg-gradient-to-t from-[#074264] to-[#83A5C7] hover:to-[#1E95D9] w-full shadow-lg group"
+                    type="submit"
+                  >
                     <span>Send message</span>
                     <svg
                       className="w-3 h-3 shrink-0 mt-px ml-2"
@@ -114,6 +175,7 @@ export default function Contact() {
                       />
                     </svg>
                   </button>
+                  {status && <p className="text-center mt-4">{status}</p>}
                 </div>
               </div>
             </form>
