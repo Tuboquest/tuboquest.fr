@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -30,19 +31,14 @@ export default function Contact() {
     setSuccess(false);
     setError("");
 
+    // Paramètres pour EmailJS
+    const serviceID = "VITE_REACT_APP_SERVICE_ID"; // Remplacez par votre ID de service
+    const templateID = "VITE_REACT_APP_TEMPLATE_ID"; // Remplacez par votre ID de template
+    const userID = "VITE_REACT_APP_PUBLIC_KEY"; // Remplacez par votre ID utilisateur
+
     try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to send email");
-      }
-
+      // Envoyer l'email via EmailJS
+      await emailjs.send(serviceID, templateID, formData, userID);
       setSuccess(true);
     } catch (err: any) {
       setError(err.message || "An unexpected error occurred");
@@ -64,8 +60,6 @@ export default function Contact() {
           </div>
 
           <form className="max-w-xl mx-auto" onSubmit={handleSubmit}>
-            {/* Form fields */}
-            {/* First Name */}
             <div className="flex flex-wrap -mx-3 mb-5">
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                 <label
@@ -85,7 +79,6 @@ export default function Contact() {
                   onChange={handleChange}
                 />
               </div>
-              {/* Last Name */}
               <div className="w-full md:w-1/2 px-3">
                 <label
                   className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1"
@@ -105,7 +98,6 @@ export default function Contact() {
                 />
               </div>
             </div>
-            {/* Phone Number */}
             <div className="flex flex-wrap -mx-3 mb-5">
               <div className="w-full px-3">
                 <label
@@ -126,7 +118,6 @@ export default function Contact() {
                 />
               </div>
             </div>
-            {/* Country */}
             <div className="flex flex-wrap -mx-3 mb-5">
               <div className="w-full px-3">
                 <label
@@ -151,7 +142,6 @@ export default function Contact() {
                 </select>
               </div>
             </div>
-            {/* Message */}
             <div className="flex flex-wrap -mx-3 mb-5">
               <div className="w-full px-3">
                 <label
@@ -173,7 +163,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Submit Button */}
             <div className="flex flex-wrap -mx-3 mt-6">
               <div className="w-full px-3">
                 <button
