@@ -43,7 +43,8 @@ export default function Contact() {
       await emailjs.send(serviceID, templateID, formData, userID);
       setSuccess(true);
     } catch (err: any) {
-      setError(err.message || "An unexpected error occurred");
+      console.error("EmailJS Error:", err);
+      setError(err.text || "An unexpected error occurred");
     } finally {
       setLoading(false);
     }
