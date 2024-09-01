@@ -34,12 +34,19 @@ export default function Contact() {
     setError("");
 
     // Paramètres pour EmailJS
-    const serviceID = process.env.VITE_REACT_APP_SERVICE_ID ?? "";
-    const templateID = process.env.VITE_REACT_APP_TEMPLATE_ID ?? "";
-    const userID = process.env.VITE_REACT_APP_PUBLIC_KEY ?? "";
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "";
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "";
+    const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
+
+    if (!serviceID || !templateID || !userID) {
+      setError(
+        "EmailJS configuration is missing. Please check your environment variables."
+      );
+      setLoading(false);
+      return;
+    }
 
     try {
-      // Envoyer l'email via EmailJS
       await emailjs.send(serviceID, templateID, formData, userID);
       setSuccess(true);
     } catch (err: any) {
