@@ -34,9 +34,9 @@ export default function Contact() {
     setError("");
 
     // Paramètres pour EmailJS
-    const serviceID = process.env.VITE_REACT_APP_SERVICE_ID;
-    const templateID = process.env.VITE_REACT_APP_TEMPLATE_ID;
-    const userID = process.env.VITE_REACT_APP_PUBLIC_KEY;
+    const serviceID = process.env.VITE_REACT_APP_SERVICE_ID ?? "";
+    const templateID = process.env.VITE_REACT_APP_TEMPLATE_ID ?? "";
+    const userID = process.env.VITE_REACT_APP_PUBLIC_KEY ?? "";
 
     try {
       // Envoyer l'email via EmailJS
